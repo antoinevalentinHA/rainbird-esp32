@@ -49,7 +49,7 @@ The ESP32-C3 sits near the Rain Bird controller (BLE range ~10m) and connects to
 ### 1. Clone and configure
 
 ```bash
-git clone https://github.com/maillme/rainbird-esp32.git
+git clone https://github.com/antoinevalentinHA/rainbird-esp32.git
 cd rainbird-esp32
 ```
 

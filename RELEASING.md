@@ -35,4 +35,4 @@ gh release create v<version> .pio/build/esp32c3/firmware.bin --title "v<version>
 ### 7. OTA deploy (if requested)
 From HA Developer Tools → Services → mqtt.publish:
 - **Topic:** `rainbird/ota/set`
-- **Payload:** `https://github.com/maillme/rainbird-esp32/releases/download/v<version>/firmware.bin`
+- **Payload:** `https://github.com/antoinevalentinHA/rainbird-esp32/releases/download/v<version>/firmware.bin`

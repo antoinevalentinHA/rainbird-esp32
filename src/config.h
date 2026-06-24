@@ -3,7 +3,7 @@
 #include "secrets.h"
 
 // Firmware version (bump this before each release)
-#define FW_VERSION "0.3.1"
+#define FW_VERSION "0.3.2"
 
 // MQTT Client ID
 #define MQTT_CLIENT_ID "rainbird-bridge"
@@ -28,11 +28,11 @@
 
 // GitHub release checking (for HA update entity)
 #define GITHUB_API_HOST "api.github.com"
-#define GITHUB_RELEASES_PATH "/repos/maillme/rainbird-esp32/releases/latest"
+#define GITHUB_RELEASES_PATH "/repos/antoinevalentinHA/rainbird-esp32/releases/latest"
 
 // MQTT Topics
 #define MQTT_BASE_TOPIC "rainbird"
 #define MQTT_DISCOVERY_PREFIX "homeassistant"
 
-// Station count (BAT-BT-4 has 4 stations)
-#define NUM_STATIONS 4
+// Station count (BAT-BT-2 has 2 stations)
+#define NUM_STATIONS 2

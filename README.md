@@ -1,3 +1,8 @@
+> **Base variant (Seeed XIAO ESP32-C3).** The firmware actually in service is the ELEGOO ESP32 (WROOM-32) variant
+> derived from this one: [`rainbird-esp32-elegoo`](https://github.com/antoinevalentinHA/rainbird-esp32-elegoo).
+
+---
+
 # Rain Bird BLE-to-MQTT Bridge
 
 ESP32-C3 firmware that bridges Rain Bird battery-powered BLE irrigation controllers to Home Assistant via MQTT.

@@ -1,4 +1,5 @@
-> **Base variant (Seeed XIAO ESP32-C3).** The firmware actually in service is the ELEGOO ESP32 (WROOM-32) variant
+> **Fork of [`maillme/rainbird-esp32`](https://github.com/maillme/rainbird-esp32) by Neil Smith (maillme)**, kept on the
+> original Seeed XIAO ESP32-C3 target. The firmware actually in service is the ELEGOO ESP32 (WROOM-32) variant
 > derived from this one: [`rainbird-esp32-elegoo`](https://github.com/antoinevalentinHA/rainbird-esp32-elegoo).
 
 ---
@@ -105,8 +106,26 @@ The ESP32-C3's single 2.4GHz radio is shared between WiFi and BLE. WiFi power sa
 
 ## Protocol
 
-Communication with the Rain Bird controller uses the proprietary SIP protocol over BLE, reverse-engineered from the Rain Bird Android app. See `PROTOCOL.md` for the full command reference.
+Communication with the Rain Bird controller uses the proprietary SIP protocol over BLE, reverse-engineered from the Rain Bird Android app. See [`.claude/PROTOCOL.md`](.claude/PROTOCOL.md) for the full command reference.
+
+## Relationship to the original project
+
+This repository is a fork of **[maillme/rainbird-esp32](https://github.com/maillme/rainbird-esp32)**
+by **Neil Smith (maillme)**, which contains the original design and the vast majority of the code.
+The full upstream commit history is preserved here, with commit SHAs identical to upstream.
+
+**What this fork changes** — configuration only, no functional code:
+
+- `NUM_STATIONS` adapted from 4 to 2 for a BAT-BT-2 controller
+- Firmware version and the GitHub releases path pointed at this fork, so OTA update checks resolve here
+- `ARDUINO_USB_MODE` / `ARDUINO_USB_CDC_ON_BOOT` PlatformIO build flags needed by this variant
+
+**What is unchanged:** the BLE/SIP protocol handling, MQTT/Home Assistant discovery, and OTA logic
+are the original upstream implementation. All credit for the core project goes to the upstream author.
+
+For the reference project, see the [upstream repository](https://github.com/maillme/rainbird-esp32).
 
 ## License
 
-ISC
+[ISC](LICENSE) — see the [`LICENSE`](LICENSE) file. Original copyright © Neil Smith (maillme);
+local configuration changes © Antoine Valentin.
